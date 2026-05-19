@@ -2,7 +2,7 @@ package parrot;
 
 public abstract class Parrot {
 
-    protected Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
+    protected Parrot() {
     }
 
     public abstract double getSpeed();
