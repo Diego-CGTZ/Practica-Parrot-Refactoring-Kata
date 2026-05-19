@@ -10,9 +10,11 @@ public class NorwegianBlueParrot extends Parrot {
         this.isNailed = isNailed;
     }
 
+    private static final double MAXIMUM_SPEED = 24.0;
+
     @Override
     public double getSpeed() {
-        return isNailed ? 0 : getBaseSpeed(voltage);
+        return isNailed ? 0 : Math.min(MAXIMUM_SPEED, voltage * getBaseSpeed());
     }
 
     @Override
